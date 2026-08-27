@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKKI DECOR | تسوق بأفضل الأسعار</title>
+  <meta name="description"
+    content="تسوق أفضل المنتجات بأسعار مميزة مع توصيل لجميع الولايات. اطلب الآن واستمتع بجودة عالية وخدمة ممتازة.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-effects">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo" id="site-logo">AKKI DECOR</div>
+    <ul class="nav-links">
+      <li><a href="#product" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="#about" data-i18n="nav_product">المنتج</a></li>
+      <li><a href="#order" data-i18n="nav_order">اطلب الآن</a></li>
+      <li>
+        <select id="lang-switcher" class="lang-switcher" onchange="changeLanguage(this.value)">
+          <option value="ar">العربية</option>
+          <option value="fr">Français</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ============================
+       SECTION 1: Product Showcase (Original Flow)
+       ============================ -->
+  <section class="section product-showcase" id="product" style="padding-top: 100px; padding-bottom: 30px;">
+    <div class="container" style="text-align: center;">
+
+      <!-- Title (Centered, White text just like the screenshot) -->
+      <h1 id="hero-product-name" style="font-size: 2.8rem; font-weight: 800; color: #fff; margin-bottom: 30px;">منتجنا
+        المميز</h1>
+
+      <!-- Gallery (Directly below Title) -->
+      <div id="gallery-container" class="gallery-grid" style="margin-bottom: 30px; position: relative; width: 100%;">
+        <div class="no-product" id="no-product-msg">
+          <div class="icon">📦</div>
+          <h3>لا توجد صور حالياً</h3>
+          <p>سيتم إضافة صور المنتج قريباً</p>
+        </div>
+      </div>
+
+      <!-- Price Badge (Centered on Mobile and Desktop) -->
+      <div id="hero-price-badge"
+        style="display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 50px; padding: 15px 30px; margin: 0 auto 30px; max-width: max-content;">
+        <span class="price-amount" id="hero-price-val"
+          style="font-size: 2rem; font-weight: 800; color: var(--gold-light);">---</span>
+        <span class="price-tag-label" data-i18n="only_price"
+          style="font-size: 1.2rem; font-weight: 600; color: #fff;">د.ج</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 2: Description & Features
+       ============================ -->
+  <section class="section about-section" id="about" style="padding: 20px 0;">
+    <div class="container">
+      <div class="about-card reveal" id="product-desc-block"
+        style="display: none; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; text-align: center;">
+        <h3 style="color: var(--gold-primary); margin-bottom: 20px; font-size: 1.4rem;">تفاصيل المنتج</h3>
+        <p id="hero-description" class="about-text"
+          style="color: #eee; line-height: 1.8; font-size: 1.1rem; white-space: pre-line;"></p>
+      </div>
+
+      <!-- Features Strip -->
+      <div class="features-strip reveal"
+        style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <div class="feature-item"
+          style="text-align: center; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+          <div class="icon" style="font-size: 2rem; margin-bottom: 10px;">🚚</div>
+          <h4 data-i18n="feature_1_title" style="color: #fff; margin-bottom: 5px;">توصيل سريع</h4>
+          <p data-i18n="feature_1_desc" style="color: #bbb; font-size: 0.9rem;">لجميع الولايات</p>
+        </div>
+        <div class="feature-item"
+          style="text-align: center; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+          <div class="icon" style="font-size: 2rem; margin-bottom: 10px;">✅</div>
+          <h4 data-i18n="feature_2_title" style="color: #fff; margin-bottom: 5px;">جودة مضمونة</h4>
+          <p data-i18n="feature_2_desc" style="color: #bbb; font-size: 0.9rem;">منتجات أصلية 100%</p>
+        </div>
+        <div class="feature-item"
+          style="text-align: center; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+          <div class="icon" style="font-size: 2rem; margin-bottom: 10px;">💰</div>
+          <h4 data-i18n="feature_3_title" style="color: #fff; margin-bottom: 5px;">دفع عند الاستلام</h4>
+          <p data-i18n="feature_3_desc" style="color: #bbb; font-size: 0.9rem;">لا تدفع حتى تستلم</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 3: Order Form
+       ============================ -->
+  <section class="section order-section" id="order" style="padding: 40px 0 60px;">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin-bottom: 30px;">
+        <span class="label" data-i18n="order_label"
+          style="display: block; color: var(--gold-primary); margin-bottom: 10px; font-weight: 600;">نموذج الطلب</span>
+        <h2 data-i18n="order_title" style="color: #fff; font-size: 2rem; margin-bottom: 10px;">اطلب الآن واستلم حتى باب
+          بيتك</h2>
+        <p data-i18n="order_desc" style="color: #aaa;">املأ النموذج التالي وسنتواصل معك لتأكيد الطلب</p>
+      </div>
+
+      <div class="order-card reveal"
+        style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; max-width: 650px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+        <form id="order-form" autocomplete="on">
+
+          <!-- Model Selection -->
+          <div class="form-group">
+            <label><span data-i18n="form_model">نوع الموديل</span> <span class="required"
+                style="color: var(--gold-primary);">*</span></label>
+            <input type="hidden" id="selected-model-val" required>
+            <div class="model-selection-grid" id="models-grid" style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <!-- Filled dynamically -->
+            </div>
+            <div id="model-error" data-i18n="form_model_error"
+              style="color: #f87171; font-size: 0.85rem; margin-top: 5px; display: none;">يرجى اختيار الموديل</div>
+          </div>
+
+          <!-- Full Name -->
+          <div class="form-group" style="margin-top: 20px;">
+            <label><span data-i18n="form_name">الاسم الكامل</span> <span class="required"
+                style="color: var(--gold-primary);">*</span></label>
+            <input type="text" class="form-control" id="full-name" data-i18n-placeholder="form_name_placeholder"
+              placeholder="أدخل اسمك الكامل" required
+              style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group" style="margin-top: 20px;">
+            <label><span data-i18n="form_phone">رقم الهاتف</span> <span class="required"
+                style="color: var(--gold-primary);">*</span></label>
+            <input type="tel" class="form-control" id="phone" data-i18n-placeholder="form_phone_placeholder"
+              placeholder="مثال: 0555 00 00 00" required dir="ltr"
+              style="text-align: right; width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+          </div>
+
+          <!-- Delivery Location (Wilaya) -->
+          <div class="form-group" style="margin-top: 20px;">
+            <label><span data-i18n="form_wilaya">ولاية التوصيل</span> <span class="required"
+                style="color: var(--gold-primary);">*</span></label>
+            <select class="form-control" id="wilaya-select" required
+              style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+              <option value="" data-i18n="form_wilaya_placeholder">-- اختر الولاية --</option>
+            </select>
+          </div>
+
+          <!-- Delivery Type -->
+          <div class="form-group" style="margin-top: 20px;">
+            <label><span data-i18n="form_delivery_type">نوع التوصيل</span> <span class="required"
+                style="color: var(--gold-primary);">*</span></label>
+            <div class="delivery-type-options" style="display: flex; gap: 15px; margin-top: 10px;">
+              <div class="delivery-type-card active" id="dt-home" onclick="selectDeliveryType(this, 'home')"
+                style="flex:1; background: rgba(255,255,255,0.05); border: 1px solid var(--gold-primary); border-radius: 8px; padding: 15px; text-align: center; cursor: pointer;">
+                <span class="dt-icon" style="font-size: 1.5rem; display: block; margin-bottom: 5px;">🏠</span>
+                <div class="dt-title" data-i18n="delivery_home" style="color: var(--gold-light); font-weight: bold;">
+                  توصيل لباب المنزل</div>
+              </div>
+              <div class="delivery-type-card" id="dt-office" onclick="selectDeliveryType(this, 'office')"
+                style="flex:1; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 15px; text-align: center; cursor: pointer;">
+                <span class="dt-icon" style="font-size: 1.5rem; display: block; margin-bottom: 5px;">🏢</span>
+                <div class="dt-title" data-i18n="delivery_office" style="color: #fff;">توصيل للمكتب</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Summary -->
+          <div class="price-summary" id="price-summary"
+            style="margin-top: 30px; background: rgba(255, 215, 0, 0.05); border: 1px solid rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 8px;">
+            <div class="price-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <span class="label" data-i18n="price_product" style="color: #aaa;">سعر المنتج:</span>
+              <span class="value" id="product-price-display" style="color: var(--gold-light); font-weight: bold;">0
+                د.ج</span>
+            </div>
+            <div class="price-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <span class="label" style="color: #aaa;"><span data-i18n="price_delivery">سعر التوصيل</span> (<span
+                  id="selected-wilaya-name" data-i18n="price_undefined">غير محدد</span>)</span>
+              <span class="value" id="delivery-price-display" style="color: #fff; font-weight: bold;">---</span>
+            </div>
+            <div class="price-row total"
+              style="display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; margin-top: 10px;">
+              <span class="label" data-i18n="price_total"
+                style="color: #fff; font-weight: bold; font-size: 1.1rem;">المجموع الكلي</span>
+              <span class="value" id="total-price-display"
+                style="color: var(--gold-primary); font-weight: 900; font-size: 1.4rem;">0 د.ج</span>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary btn-submit" id="submit-btn"
+            style="width: 100%; margin-top: 25px; padding: 18px; font-size: 1.2rem; background: var(--gold-primary); color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+            <span data-i18n="btn_submit">تأكيد الطلب</span>
+            <span>✅</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer"
+    style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 20px;">
+    <p style="color: #666; font-size: 0.9rem;">© 2026 <span id="footer-brand" style="color: var(--gold-light);">AKKI
+        DECOR</span>. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></p>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal-content">
+      <div class="checkmark">✓</div>
+      <h3 data-i18n="modal_title">تم تسجيل طلبك بنجاح! 🎉</h3>
+      <p style="font-weight: 600; font-size: 1.15rem; color: var(--gold-light);" data-i18n="modal_desc">فريق AKKI DECOR
+        راح يتواصل معكم لتأكيد الطلبية</p>
+      <button class="btn btn-primary" onclick="closeModal()" data-i18n="modal_btn">حسناً</button>
+    </div>
+  </div>
+
+  <!-- Supabase Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase_client.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
